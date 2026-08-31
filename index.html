@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trust Layer | Local Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Trust Layer</h1>
+      <nav>
+        <a href="#providers">Providers</a>
+        <a href="#ratings">Ratings & Reviews</a>
+        <a href="#support">Customer Support</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Reliable local services, scored beyond stars.</h2>
+        <p>
+          We evaluate plumbers, tutors, freelancers and more using reliability signals like response consistency,
+          completion rate, punctuality patterns, and dispute history.
+        </p>
+      </div>
+    </section>
+    <section id="providers" class="section container">
+      <h3>Top Trusted Providers</h3>
+      <div id="providerGrid" class="provider-grid"></div>
+    </section>
+    <section class="section container tabs-shell">
+      <div class="tabs" role="tablist" aria-label="Trust Layer sections">
+        <button class="tab-btn active" data-tab="ratings" role="tab" aria-selected="true">Ratings & Reviews</button>
+        <button class="tab-btn" data-tab="support" role="tab" aria-selected="false">Customer Support</button>
+      </div>
+      <div id="ratings" class="tab-panel active" role="tabpanel">
+        <h3>Ratings & Reviews</h3>
+        <p class="tab-intro">Signal-aware feedback where trust score and customer sentiment are viewed together.</p>
+        <div id="reviewList" class="review-list"></div>
+      </div>
+      <div id="support" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <h3>Customer Support</h3>
+        <p class="tab-intro">Need help? Tell us what happened and our trust operations team will respond quickly.</p>
+        <div class="support-grid">
+          <div class="support-card">
+            <h4>Help Categories</h4>
+            <ul>
+              <li>Booking issues</li>
+              <li>Provider punctuality disputes</li>
+              <li>Quality complaints</li>
+              <li>Payment and refund support</li>
+            </ul>
+          </div>
+          <div class="support-card">
+            <h4>Typical Response SLA</h4>
+            <p>General requests: under 4 hours</p>
+            <p>Urgent service disputes: under 60 minutes</p>
+          </div>
+        </div>
+        <form id="supportForm" class="support-form">
+          <label>
+            Full Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Issue Category
+            <select name="category" required>
+              <option value="">Select a category</option>
+              <option>Booking issue</option>
+              <option>Punctuality dispute</option>
+              <option>Service quality concern</option>
+              <option>Payment/refund support</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit">Submit Request</button>
+          <p id="supportMessage" class="support-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Trust Layer Prototype � Built for Local Services Reliability</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
